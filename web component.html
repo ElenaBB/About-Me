@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+	<head><title>Welcome to my Homepage</title>
+			<link href="css/styles.css" rel="stylesheet" type="text/css" >
+
+	</head>
+
+<body style="background-color:#c0d6e7">
+		<div id="page_container">
+		<h1 align="center">Welcome to my homepage</h1>
+		
+		
+		
+		<table border="1" width=100% height="500"> 
+			<tr bgcolor=#9dd4ff> 
+				<td valign="top" width=20% align="center">
+					<h4>Main Menu</h4><br>
+					<a href="about.html">About Me</a><br><br>
+					<a href="education.html">Education</a><br><br>
+					<a href="hobbies.html">Hobbies</a><br><br><br>
+					<a href="web component.html">Web Component</a><br><br><br>
+					<a href="index.html">Main</a>
+				</td>
+				<td valign="top" style="padding-left:25px;">
+                	<script type="text/javascript">
+      <!--
+        d = new Date();
+        datestr = d.toLocaleString();
+        document.write('<p>Today is: ' + datestr + '</p>');
+      //-->
+    </script>
+					<h2>Web Graphics</h2>
+     
+					
+			<p>Please, see the result of my work in GIMP. This is the compilation of picturs of Tomsk and me in the center. Don't be puzzled by my gloomy look: the photo above clearely demonstartes minus 42 Celsius in December, and the ispiring slogan "Cheer up, people, the summer is getting on!".
+	            As for other pictures: the upper left is the main building of Tomsk State University, my Alma Mater. The bootom left represents Russian-German cultural house, this building is the former homestead of Tomsk merchant Golovanov. In the picture to the right you can see the monument to Anton Chekhov, a dramatist and author. The actual name for this extravagant monument is <i>"Anton Pavlovich in Tomsk - drunkard's view, lying in a ditch, who never read Kashtanka"</i>. Leontiy Usov, the creator, was on the edge of being expelled from the Russian union of sculptors for such a modern view on Chekhov. </p> <br>
+			 <div align="center"><img src="pics/default_hi.jpg" width="604"></div>
+             </p> 
+<div align="center"><img src="default_hi.jpg"></div>
+<br>
+
+<h2>Web Audio</h2>
+					
+			<p>The recordings below are numbers and greeting in Russian</p> <br>
+			<div><audio controls="controls">
+                    <source src="audio controls/numbers.ogg" type="audio/ogg">    
+            </audio></div>
+            <br />
+            <div><audio controls="controls">                     
+                    <source src="audio controls/greeting.mp3" type='audio/mpeg; codecs="mp3"'>   
+            </audio></div>
+
+<h2>Analysis of Speech</h2>
+                <div> <p>   This is the spectrogram of the word "Marburg".
+                </p>
+                <div align="center"><img src="pics/Marburg_spectrogram.jpg" width="604"></div>
+                </div>
+			 
+					
+					
+<h2>Screencast</h2>
+				<p>Virtual route from Marburg, Germany to Tomsk.</p> <br>
+                 <div align="center">
+                 <video width="320" height="240" controls>
+  <source src="video/screencast_geodata.mp4" type="video/mp4">
+  </div>
+</video> 
+			
+<h2>Popup</h2>
+<script>
+function myFunction()
+    {
+    alert("Hello! I am an alert box!");
+    }
+</script>
+</head>
+<body>
+
+<input type="button" onclick="myFunction()" value="Show alert box" />
+<script>
+var person=prompt("Please enter your name","Agent 007");
+if (person!=null && person!="")
+  {
+  x="Hello " + person + "! How are you today?";
+  }  
+</script>
+
+		
+	
+<h2>Geodata</h2>       
+	<style>
+      #map-canvas {
+        width: 400px;
+        height: 400px;
+       
+      }
+    </style>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script>
+      function initialize() {
+        var map_canvas = document.getElementById('map-canvas');
+        var map_options = {
+          center: new google.maps.LatLng(56.466, 84.962),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }        
+        var map = new google.maps.Map(map_canvas, map_options)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+      
+    </script>
+  </head>
+  <body onload="initialize()">
+    <div id="map-canvas"></div>	
+		
+</body>
+</html>
